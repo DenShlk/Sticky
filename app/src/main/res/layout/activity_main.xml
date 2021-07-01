@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/tgVeryDarkBlue">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/main_stickers_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.nambimobile.widgets.efab.ExpandableFabLayout
+        android:id="@+id/expandableFabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <com.nambimobile.widgets.efab.Overlay
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:overlay_color="@color/tgVeryDarkBlue"/>
+
+        <com.nambimobile.widgets.efab.ExpandableFab
+            android:id="@+id/main_fab_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="15dp"
+            app:efab_closingAnimationDurationMs="200"
+            app:efab_icon="@drawable/ic_baseline_menu_24"
+            app:efab_iconAnimationRotationDeg="180"
+            app:efab_openingAnimationDurationMs="200" />
+
+        <com.nambimobile.widgets.efab.FabOption
+            android:id="@+id/main_fab_add_option"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_icon="@drawable/ic_baseline_add_24"
+            app:label_backgroundColor="@android:color/transparent"
+            app:label_text="Add new image" />
+
+        <com.nambimobile.widgets.efab.FabOption
+            android:id="@+id/main_fab_export_option"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_icon="@drawable/ic_baseline_send_24"
+            app:label_backgroundColor="@android:color/transparent"
+            app:label_text="Export to Telegram" />
+
+    </com.nambimobile.widgets.efab.ExpandableFabLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
